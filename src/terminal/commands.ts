@@ -136,8 +136,8 @@ export function handleCommand(cmd: string, term: Terminal) {
 
       term.writeln("");
       term.writeln(`${bold}Coordonnées personnelles${reset}`);
-      term.writeln("\x1b[32mEmail\x1b[0m : REMOVED");
-      term.writeln("\x1b[32mTéléphone\x1b[0m : REMOVED");
+      term.writeln("\x1b[32mEmail\x1b[0m : " + import.meta.env.VITE_CONTACT_EMAIL);
+      term.writeln("\x1b[32mTéléphone\x1b[0m : " + import.meta.env.VITE_CONTACT_PHONE);
 
       break;
     }
