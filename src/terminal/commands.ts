@@ -27,13 +27,13 @@ export function handleCommand(cmd: string, term: Terminal) {
       term.writeln("");
 
       term.writeln("Ingénieur diplômé en Systèmes d'Information");
-      term.writeln("Développeur Full Stack sur une application métier pour la douane française.");
+      term.writeln("Développeur Full Stack sur une application métier pour la douane française");
       term.writeln("");
 
-      term.writeln("Intérêt particulier pour le software engineering et le développement d'app web, attrait pour le data engineering/data analyse, aux sujets de performance, à la\r\ncybersécurité et l'IA.");
+      term.writeln("Intérêt particulier pour le software engineering et le développement d'app web, attrait pour le data engineering/data analyse, aux sujets de performance, à la\r\ncybersécurité et l'IA");
       term.writeln("");
 
-      term.writeln("Ouvert à de nouvelles opportunités.");
+      term.writeln("Ouvert à de nouvelles opportunités");
       
       break;
 

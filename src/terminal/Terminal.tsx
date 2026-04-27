@@ -57,7 +57,6 @@ export default function TerminalComponent() {
         await sleep(80);
       }
 
-      // IMPORTANT: on termine la ligne proprement
       term.write("\r\x1b[2K");
       term.writeln(`\x1b[3m${prefix}${finalName}\x1b[0m`);
     };
@@ -118,7 +117,6 @@ export default function TerminalComponent() {
 
     term.onData(async (data: string) => {
       if (bootLocked) {
-        // attente de "enter"
         if (data === "\r") {
           term.write("\r\n");
 
@@ -126,7 +124,7 @@ export default function TerminalComponent() {
             currentLine = "";
             await runLoadingSequence();
           } else {
-            term.writeln("Entrée invalide, prenez votre temps...");
+            term.writeln("Commande invalide, tapez 'enter' pour continuer...");
             currentLine = "";
           }
         } else if (data === "\u007F") {
@@ -156,7 +154,6 @@ export default function TerminalComponent() {
       }
     });
 
-    // lancer boot
     bootSequence();
 
     return () => term.dispose();
